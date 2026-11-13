@@ -1,0 +1,32 @@
+node_modules/
+dist/
+dist-web/
+.env
+.env.*
+!/.env.example
+.envrc
+.npmrc
+*.local
+*.log
+
+# Local credentials and private keys
+credentials.json
+secrets.json
+service-account*.json
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Temporary files and local caches
+tmp/
+temp/
+.cache/
+coverage/
+*.tmp
+*.temp
+*.swp
+*.bak
+*~
+Thumbs.db
+.DS_Store

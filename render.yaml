@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: coffee-sommelier
+    runtime: node
+    plan: free
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "24.22.1"
+      - key: NODE_ENV
+        value: production
+      - key: OPENAI_MODEL
+        value: gpt-6-luna
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: SHEET_CSV_URL
+        value: "https://docs.google.com/spreadsheets/d/1E8unlMh8fmz01Hku66fmFjVZ7TwpBoAZI47WENZhMBk/export?format=csv&gid=0"
